@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{79093B0E-F018-4D9F-9338-C347B043EB0D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MouseLabyrinth</RootNamespace>
+    <AssemblyName>MouseLabyrinth</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Labyrinth\ILabyrinth.cs" />
+    <Compile Include="Mouse\IMouseContext.cs" />
+    <Compile Include="My\MyGameCreater.cs" />
+    <Compile Include="Ugly\UglyGameCreater.cs" />
+    <Compile Include="Ugly\UglyCheese.cs" />
+    <Compile Include="Ugly\UglyLabyrinthBuilder.cs" />
+    <Compile Include="My\MyCheese.cs" />
+    <Compile Include="Ugly\UglyFreeCell.cs" />
+    <Compile Include="Ugly\UglyMouse.cs" />
+    <Compile Include="Ugly\UglyWall.cs" />
+    <Compile Include="Game.cs" />
+    <Compile Include="Labyrinth\Cheese.cs" />
+    <Compile Include="Labyrinth\Coords.cs" />
+    <Compile Include="Labyrinth\FreeCell.cs" />
+    <Compile Include="Labyrinth\Labyrinth.cs" />
+    <Compile Include="Labyrinth\Cell.cs" />
+    <Compile Include="Labyrinth\LabyrinthBuilder.cs" />
+    <Compile Include="Labyrinth\MouseRunner.cs" />
+    <Compile Include="Labyrinth\Wall.cs" />
+    <Compile Include="Mouse\Dir.cs" />
+    <Compile Include="Mouse\MouseStrategy.cs" />
+    <Compile Include="Mouse\MouseContext.cs" />
+    <Compile Include="Ugly\HaosMouseStrategy.cs" />
+    <Compile Include="My\MyMouseStrategy.cs" />
+    <Compile Include="My\MyFreeCell.cs" />
+    <Compile Include="My\MyLabyrinthBuilder.cs" />
+    <Compile Include="My\MyMouse.cs" />
+    <Compile Include="My\MyWall.cs" />
+    <Compile Include="UI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mouse\Mouse.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\LabyrinthView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UI\LabyrinthView.Designer.cs">
+      <DependentUpon>LabyrinthView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="My\Настраиваемые классы.txt" />
+    <Content Include="readme.txt" />
+    <Content Include="Ugly\Пример настраиваемых классов.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

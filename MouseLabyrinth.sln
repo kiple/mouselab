@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MouseLabyrinth", "MouseLabyrinth.prj\MouseLabyrinth.csproj", "{79093B0E-F018-4D9F-9338-C347B043EB0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Release|Mixed Platforms = Release|Mixed Platforms
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79093B0E-F018-4D9F-9338-C347B043EB0D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{79093B0E-F018-4D9F-9338-C347B043EB0D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{79093B0E-F018-4D9F-9338-C347B043EB0D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{79093B0E-F018-4D9F-9338-C347B043EB0D}.Release|Mixed Platforms.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
